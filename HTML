@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Donation Form</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .form-box { 
+            border: 2px solid #000; 
+            padding: 20px; 
+            max-width: 400px; 
+            margin: auto;
+        }
+        input, select { 
+            width: 100%; 
+            padding: 8px; 
+            margin: 5px 0; 
+        }
+        .donate-btn {
+            background: green;
+            color: white;
+            padding: 12px;
+            width: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <h2>18₹ Donate</h2>
+        <form action="/submit" method="post">
+            <input type="text" name="sponsorId" placeholder="Sponsor ID *" required><br>
+            <input type="text" name="fullName" placeholder="Full Name *" required><br>
+            <input type="tel" name="mobile" placeholder="Mobile No *" pattern="[0-9]{10}" required><br>
+            <select name="state" required>
+                <option value="">Select State</option>
+                <option>Uttar Pradesh</option>
+                <option>Bihar</option>
+            </select><br>
+            <select name="city" required>
+                <option value="">Select City</option>
+                <option>Varanasi</option>
+                <option>Patna</option>
+            </select><br>
+            <button type="submit" class="donate-btn">CREATE ACCOUNT & DONATE</button>
+        </form>
+    </div>
+</body>
+</html>
